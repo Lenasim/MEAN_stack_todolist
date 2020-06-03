@@ -31,27 +31,26 @@ html, body {
 }
 
 .modal-box {
-    min-height: 200px;
+    min-height: 12rem;
     width: 100%;
-    max-width: 580px;
+    max-width: 36rem;
     background: white;
-    border-radius: 5px;
-    padding: 35px;
+    border-radius: 0.3rem;
+    padding: 2rem;
 }
 
 .title {
     font-family: 'Lato';
-    font-size: 24px;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.1rem;
 }
 
 .white-box {
     padding: 35px;
     background: white;
-    border-radius: 5px;
-
-    width: 350px;
-    max-width: 350px;
-    
+    border-radius: 0.3rem;
+    width: 22rem;
+    max-width: 22rem;
+    ;
 }
