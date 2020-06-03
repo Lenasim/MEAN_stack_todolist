@@ -1,12 +1,13 @@
 // handle connection logic to MongoDB
 const mongoose = require('mongoose');
+
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/TaskManager', { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
-        console.log('connected to Mongo DB successfully!');
+        console.log('Connected to Mongo DB successfully!');
     })
-    .catch((err) => {
-        console.log(err, 'Error while attempting to connect to MongoDB');
+    .catch(e => {
+        console.log(e, 'Error while attempting to connect to MongoDB');
     });
 
     
@@ -14,4 +15,4 @@ mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: tru
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 
-module.exports = { mongoose }
+module.exports = { mongoose };
