@@ -73,7 +73,7 @@
     align-items: center;
     background: white;
 
-    &:not(.complete) {
+    &:not(.completed) {
         cursor: pointer;
         transition: box-shadow 0.2s ease, transform 0.2s ease;
     
@@ -91,7 +91,7 @@
         }
     }
 
-    &.completed .task-text {
+    &.completed {
         text-decoration: line-through;
         opacity: 0.8;
     }
