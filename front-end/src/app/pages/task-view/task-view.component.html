@@ -19,6 +19,9 @@
             <div class="task" *ngFor="let task of tasks">
                 <p>{{ task.title }}</p>
             </div>
+            <button routerLink="./new-task" class="circle-add-button button is-primary">
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </button>
         </div>
     </div>
 </div>

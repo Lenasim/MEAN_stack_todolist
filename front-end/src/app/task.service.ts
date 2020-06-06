@@ -8,15 +8,19 @@ export class TaskService {
 
   constructor(private webReqService: WebRequestService) { }
 
-  createList(title: string){
-    return this.webReqService.post('lists', { title });
-  }
-
-  getLists(){
+  getLists() {
     return this.webReqService.get('lists');
   }
 
-  getTasks(listId: string){
+  createList(title: string) {
+    return this.webReqService.post('lists', { title });
+  }
+
+  getTasks(listId: string) {
     return this.webReqService.get(`lists/${listId}/tasks`);
+  }
+
+  createTask(title: string, listId: string) {
+    return this.webReqService.post(`lists/${listId}/tasks`, { title });
   }
 }

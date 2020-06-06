@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/task.service';
 import { ActivatedRoute, Params } from '@angular/router';
-
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-view',
@@ -9,11 +9,12 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./task-view.component.scss']
 })
 export class TaskViewComponent implements OnInit {
-
-  lists: any[];
-  tasks: any[];
-
+  
   constructor(private taskService: TaskService, private route: ActivatedRoute) { }
+  
+    lists: any[];
+    tasks: any[];
+    faPlus = faPlus;
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -21,7 +22,6 @@ export class TaskViewComponent implements OnInit {
         console.log(params);
         this.taskService.getTasks(params.listId).subscribe((tasks: any[]) => {
           this.tasks = tasks;
-          
         })
       }
     )
