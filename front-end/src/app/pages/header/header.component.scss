@@ -1,0 +1,23 @@
+@import '../../../main-styles.scss';
+
+.header-nav {
+  background: linear-gradient(to right bottom, $turquoise, $green);
+  min-height: 4rem;
+  
+  .icon {
+    color: $light;
+    margin: auto 0.5rem auto 2rem;
+  }
+
+  .title {
+    margin: auto;
+    font-family: 'Lato';
+    color: $light;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+  
+  .button {
+    margin: auto 2rem auto 0.5rem;
+  }
+}
