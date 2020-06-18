@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IonicModule } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +22,6 @@ import { HeaderComponent } from './pages/header/header.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FontAwesomeModule,
     IonicModule.forRoot(),
   ],
   providers: [],
